@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  --color-surface: #f9f9fc;
+  --color-on-surface: #1a1c1e;
+  --color-primary: #003ec7;
+  --color-on-primary: #ffffff;
+  --color-surface-container-low: #f3f3f6;
+  --color-surface-container-highest: #e2e2e5;
+  --color-on-surface-variant: #434656;
+  --color-outline-variant: #c3c5d9;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.signature-gradient {
+  background: linear-gradient(135deg, #003ec7 0%, #0052ff 100%);
+}
+
+.glass-nav {
+  background-color: rgba(249, 249, 252, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.ambient-shadow:hover {
+  box-shadow: 0 20px 40px rgba(26, 28, 30, 0.06);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e2e5;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c3c5d9;
+}
